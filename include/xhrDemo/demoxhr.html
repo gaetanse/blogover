@@ -1,0 +1,31 @@
+<html>
+ <head>
+  <title>D&eacute;monstration xmlhttprequest</title>
+  <script type="text/javascript" src="xhr.js"></script>     
+ </head>
+
+ <body>
+  <p>
+   <input type='button' value='Premier test de retour' onclick='requeteXHR()' />
+  </p>
+  
+  <p>
+   <input id="info0" type='text' value='' />
+   <input type='button' value='Deuxi&egrave;me test de retour' onclick='requeteGetXHR()' />
+   <br />
+   <label id="resultatGET">Ici va venir l'information...</label>
+  </p>
+  
+  <p>
+   <form id="essai">
+   <input id="info1" type='text' value='' /><br />
+   <input id="info2" type='text' value='' /><br />
+   <input id="info3" type='text' value='' />
+   
+   <input type='button' value='Troisi&egrave;me test de retour' onclick='requetePostXHR("xhrPOST");' />
+   </form>
+  <br />
+  <label id="resultatPOST">Ici va venir l'information...</label>
+  </p>
+ </body>
+</html>

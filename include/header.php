@@ -8,18 +8,5 @@
 
     <title>Sadous Ga&euml;tan Bts Sio Option Slam</title>
 
-    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script
-            src="jquery/jquery-3.3.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous">
-    </script>
-    <script src="semantic/semantic.min.js"></script>
 
 </head>
-
-<a href="../"><div class="textEntete">Site vers la page de projets</div></a>
-
-<hr>
-

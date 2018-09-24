@@ -11,14 +11,28 @@ function ConnexionBase($mysqli){
 
 }
 
+function AjouterPost($mysqli,$titre,$nom){
+
+    $sql = $mysqli->prepare("INSERT INTO article VALUES(NULL,?,NOW(),?)");
+    $sql->bind_param('ss', $titre,$nom);
+    $sql->execute();
+
+    header("Refresh:0");
+
+}
+
+function Affichdansphp($texte){
+    ?>
+    <?php echo $texte; ?>
+    <?php
+}
+
 function RecupBlog($mysqli){
 
-    $sql = 'SELECT Titre, Date, Redacteur, Texte FROM articles;';
+    $sql = 'SELECT id, titre, ladate, redacteur FROM article';
     $res = $mysqli->query($sql);
 
-    while ($row = $res->fetch_assoc()) {
-        printf ("%s (%s) %s %s\n", $row["Titre"], $row["Date"], $row["Redacteur"], $row["Texte"]);
-    }
+    return $res;
 
 }
 
