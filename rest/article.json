@@ -1,0 +1,25 @@
+{
+  "internaute": [
+    {
+      "id": 1,
+      "email": "test@gmail.com",
+      "nom": "testnom",
+      "prenom": "dqzdq",
+      "region": "ddd"
+    },
+    {
+      "id": 2,
+      "email": "test@gmail.com",
+      "nom": "testnom",
+      "prenom": "dqzdq",
+      "region": "ddd"
+    },
+    {
+      "id": 3,
+      "email": "test@gmail.com",
+      "nom": "testnom",
+      "prenom": "dqzdq",
+      "region": "ddd"
+    }
+  ]
+}

@@ -24,6 +24,12 @@
 
  <body class="fix-header fix-sidebar">
 
+  <div class="preloader">
+   <svg class="circular" viewBox="25 25 50 50">
+    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+   </svg>
+  </div>
+
  <div class="login-box">
 
   <div class="login-logo">
@@ -69,7 +75,9 @@
       </tr>
      </table>
      </div>
-      <button value="Envoi des informations" class="btn btn-default" type="button" onclick="infos()"></button>
+     <p>Envoi des informations
+      <button class="btn btn-default" type="button" onclick="infos();"><img src="./images/icones/log-in.svg" width="24" height="24"/></button>
+     </p>
 
    </form>
 

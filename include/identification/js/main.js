@@ -33,7 +33,7 @@ function infos() {
   if (xhr.readyState=== 4) {
    if (xhr.status===200) {
     reponse = xhr.responseText;
-    document.location.href="./";
+    alert(reponse);
    } else { alert(xhr.status); }
   }
  }

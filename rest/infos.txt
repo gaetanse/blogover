@@ -1,0 +1,7 @@
+Sa fonctionne en utilisant un lien tel que :
+
+http://localhost/portfolio/projets/blogover/rest/article.php?id=3
+
+Vu qu'il n'y a pas symfony sa reviens au même que articles/3
+
++ gestion d'erreurs
