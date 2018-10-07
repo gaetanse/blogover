@@ -22,19 +22,25 @@ function AjouterPost($mysqli,$titre,$nom){
 
 function TestUser($mysqli){
 
-    $test = 123456;
+    $bdd = new PDO('mysql:host=localhost;dbname=gameover', 'root', '');
 
-    $reponse = $mysqli->query('SELECT email, passe FROM membres WHERE passe='.$test);
+    //Je choisis le champ login
+    $reponse_login = $bdd->query('SELECT email FROM redacteur'); // Je choisis de la base de donné login le champ login
+    $reponse_password = $bdd->query('SELECT passe FROM redacteur'); // Je choisis de la base de donné login le champ password
 
-    //Je vérifie tout mes champs logins
-while ($donnees = $reponse_login->fetch() AND $donees2 = $reponse_password->fetch()) // ICI INTERVIENT L'ERREUR!!!!!!!
-{
-    if ($_POST['login'] == $donnees['login'] AND $_POST['password'] == $donnees['password']) // Si mon login et password du formulaire == login et password de la base de données alors :
+//Je vérifie tout mes champs logins
+    while ($donnees = $reponse_login->fetch() AND $donees2 = $reponse_password->fetch()) // EDIT : Il n'y a plus d'erreur mais c'est à la ligne 20 maintenant
     {
-        // La suite de mon code qui y sera après que je n'ai plus d'erreur et pour l'instant c'est :
-        echo "Ouais!!!!!! J'ai plus d'érreur!!!! ( C'EST BEAU LES REVES !)" ;
+        if ($_POST['login'] == $donnees['email'] AND $_POST['lcode'] == $donees2['passe']) // ERREUR ICI
+        {
+            session_start();
+            $_SESSION['count']=1;
+        }
     }
-}
+    $reponse_login->closeCursor(); // Termine le traitement de la requête
+    $reponse_password->closeCursor(); // Termine le traitement de la requête
+
+    header("Refresh:0");
 
 }
 

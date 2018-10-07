@@ -67,7 +67,11 @@
         session_start();
         if (!isset($_SESSION['count'])) {
 
-            include("include/identification/index.php");
+            ?>
+
+            <iFRAME SRC="include/identification/index.php" NAME="gauche" width="100%">
+
+            <?php
 
         }else{
 
